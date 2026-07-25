@@ -22,7 +22,7 @@ const AuthForm = () => {
         
         try {
             const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
-            const { data } = await axios.post(`http://localhost:5000${endpoint}`, { email, password });
+            const { data } = await axios.post(endpoint, { email, password });
             
             if (isLogin) {
                 // Save token to localStorage
